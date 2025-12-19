@@ -1,0 +1,85 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.main {
+  padding: 24px 0 40px;
+}
+
+.section {
+  &__inner {
+    @include m.container;
+  }
+
+  &__title {
+    margin: 22px 0 18px;
+    font-size: v.$fs-title;
+    font-weight: 700;
+    text-align: center;
+    color: #1f2a44;
+  }
+}
+
+.carousel {
+  position: relative;
+  padding: 8px 0 28px;
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+
+  &__hint {
+    margin: 0;
+    font-size: v.$fs-sub;
+    color: v.$color-muted;
+  }
+
+  &__viewport {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 14px 6px 18px;
+    -webkit-overflow-scrolling: touch;
+    @include m.hide-scrollbar;
+  }
+
+  &__track {
+    display: flex;
+    gap: v.$gap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__controls {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.btn {
+  pointer-events: auto;
+  border: 0;
+  background: rgba(17, 24, 39, 0.92);
+  color: v.$color-white;
+  border-radius: v.$radius-pill;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(1.08);
+  }
+
+  &--icon {
+    width: 44px;
+    height: 44px;
+    margin: 0 6px;
+    font-size: 28px;
+    line-height: 1;
+  }
+}

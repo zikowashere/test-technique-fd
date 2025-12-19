@@ -1,0 +1,36 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.hero {
+  position: relative;
+  min-height: 260px;
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background-image: url("https://source.unsplash.com/featured/1600x600?stars,galaxy");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__inner {
+    position: relative;
+    padding: 56px 16px 40px;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: clamp(32px, 4vw, 56px);
+    font-weight: 700;
+    color: v.$color-white;
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+  }
+
+  @include m.media-max(v.$bp-sm) {
+    &__inner {
+      padding: 42px 16px 26px;
+    }
+  }
+}

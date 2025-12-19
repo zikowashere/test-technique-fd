@@ -1,0 +1,56 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: v.$font-family;
+  font-size: v.$fs-text;
+  line-height: 1.5;
+  color: v.$color-text;
+  background: v.$color-bg;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  @include m.focus-ring;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-120%);
+  background: v.$color-dark;
+  color: v.$color-white;
+  padding: 10px 12px;
+  z-index: 9999;
+  border-radius: 0 0 8px 0;
+
+  &:focus {
+    transform: translateY(0);
+  }
+}
+
+@include m.reduced-motion {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+}

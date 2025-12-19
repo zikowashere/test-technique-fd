@@ -1,0 +1,32 @@
+@use "variables" as v;
+
+@mixin container {
+  max-width: v.$container;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@mixin focus-ring {
+  outline: 3px solid #6aa9ff;
+  outline-offset: 3px;
+}
+
+@mixin hide-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
+
+@mixin media-max($w) {
+  @media (max-width: $w) {
+    @content;
+  }
+}
