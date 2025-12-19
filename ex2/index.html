@@ -51,5 +51,209 @@
         </div>
       </nav>
     </header>
+
+    <main id="main" class="main" role="main">
+      <section
+        class="section"
+        id="carousel-1"
+        aria-labelledby="carousel-1-title"
+      >
+        <div class="section__inner">
+          <h2 class="section__title" id="carousel-1-title">
+            Carrousel - vignette simple
+          </h2>
+
+          <div class="carousel" data-carousel>
+            <div class="carousel__header">
+              <p class="carousel__hint" id="carousel-1-hint">
+                Utilisez les boutons ou faites défiler horizontalement.
+              </p>
+            </div>
+
+            <div class="carousel__viewport" aria-describedby="carousel-1-hint">
+              <ul class="carousel__track" role="list">
+                <li class="card">
+                  <article class="card__inner">
+                    <img
+                      class="card__media"
+                      src="https://source.unsplash.com/featured/600x900?star"
+                      alt="Étoile brillante dans le ciel"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div class="card__body">
+                      <h3 class="card__title">BLUE SUPERGIANT STAR</h3>
+                      <p class="card__tag card__tag--green">Star</p>
+                      <p class="card__text">
+                        A blue supergiant (BSG) is a hot, luminous star, often
+                        referred to as an OB supergiant.
+                      </p>
+                    </div>
+                    <a
+                      class="card__link"
+                      href="#"
+                      aria-label="Voir plus sur Blue Supergiant Star"
+                      >voir plus</a
+                    >
+                  </article>
+                </li>
+
+                <li class="card">
+                  <article class="card__inner">
+                    <img
+                      class="card__media"
+                      src="https://source.unsplash.com/featured/600x900?moon"
+                      alt="Lune dans un ciel sombre"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div class="card__body">
+                      <h3 class="card__title">MILKY WAY</h3>
+                      <p class="card__tag card__tag--red">Galaxy</p>
+                      <p class="card__text">
+                        The Milky Way is the galaxy that contains our Solar
+                        System, with the name describing its appearance from
+                        Earth.
+                      </p>
+                    </div>
+                    <a
+                      class="card__link"
+                      href="#"
+                      aria-label="Voir plus sur Milky Way"
+                      >voir plus</a
+                    >
+                  </article>
+                </li>
+
+                <li class="card">
+                  <article class="card__inner">
+                    <img
+                      class="card__media"
+                      src="https://source.unsplash.com/featured/600x900?milkyway"
+                      alt="Bande lumineuse de la Voie lactée"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div class="card__body">
+                      <h3 class="card__title">SUPERMASSIVE BLACK HOLE</h3>
+                      <p class="card__tag card__tag--orange">Black hole</p>
+                      <p class="card__text">
+                        A supermassive black hole is the largest type of black
+                        hole, with mass on the order of millions to billions of
+                        times the Sun.
+                      </p>
+                    </div>
+                    <a
+                      class="card__link"
+                      href="#"
+                      aria-label="Voir plus sur Supermassive Black Hole"
+                      >voir plus</a
+                    >
+                  </article>
+                </li>
+
+                <li class="card">
+                  <article class="card__inner">
+                    <img
+                      class="card__media"
+                      src="https://source.unsplash.com/featured/600x900?nebula"
+                      alt="Nébuleuse colorée"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div class="card__body">
+                      <h3 class="card__title">NEBULA</h3>
+                      <p class="card__tag card__tag--green">Star</p>
+                      <p class="card__text">
+                        A nebula is an interstellar cloud of dust, hydrogen,
+                        helium and other ionized gases.
+                      </p>
+                    </div>
+                    <a
+                      class="card__link"
+                      href="#"
+                      aria-label="Voir plus sur Nebula"
+                      >voir plus</a
+                    >
+                  </article>
+                </li>
+
+                <li class="card">
+                  <article class="card__inner">
+                    <img
+                      class="card__media"
+                      src="https://source.unsplash.com/featured/600x900?galaxy"
+                      alt="Galaxie spirale"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div class="card__body">
+                      <h3 class="card__title">SPIRAL GALAXY</h3>
+                      <p class="card__tag card__tag--red">Galaxy</p>
+                      <p class="card__text">
+                        Spiral galaxies have rotating disks with spiral arms and
+                        a central bulge.
+                      </p>
+                    </div>
+                    <a
+                      class="card__link"
+                      href="#"
+                      aria-label="Voir plus sur Spiral Galaxy"
+                      >voir plus</a
+                    >
+                  </article>
+                </li>
+
+                <li class="card">
+                  <article class="card__inner">
+                    <img
+                      class="card__media"
+                      src="https://source.unsplash.com/featured/600x900?space"
+                      alt="Espace profond étoilé"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div class="card__body">
+                      <h3 class="card__title">DEEP SPACE</h3>
+                      <p class="card__tag card__tag--orange">Black hole</p>
+                      <p class="card__text">
+                        Deep space refers to the expanse beyond Earth’s
+                        atmosphere and nearby orbital regions.
+                      </p>
+                    </div>
+                    <a
+                      class="card__link"
+                      href="#"
+                      aria-label="Voir plus sur Deep Space"
+                      >voir plus</a
+                    >
+                  </article>
+                </li>
+              </ul>
+            </div>
+
+            <div class="carousel__controls" aria-label="Contrôles du carrousel">
+              <button
+                onclick=""
+                class="btn btn--icon"
+                type="button"
+                data-carousel-prev
+                aria-label="Précédent"
+              >
+                ‹
+              </button>
+              <button
+                class="btn btn--icon"
+                type="button"
+                data-carousel-next
+                aria-label="Suivant"
+              >
+                ›
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
