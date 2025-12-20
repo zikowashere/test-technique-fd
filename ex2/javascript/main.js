@@ -15,4 +15,17 @@
       history.pushState(null, "", href);
     });
   });
+
+  function setActiveLink(activeLink) {
+    navLinks.forEach((a) => a.classList.remove("is-active"));
+    activeLink.classList.add("is-active");
+
+    const rect = activeLink.getBoundingClientRect();
+    const parentRect = activeLink
+      .closest(".nav__inner")
+      .getBoundingClientRect();
+    const left = rect.left - parentRect.left;
+    indicator.style.transform = `translateY(${left}px)`;
+    indicator.style.width = `${rect.width}px`;
+  }
 })();
