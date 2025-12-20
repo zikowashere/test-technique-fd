@@ -65,4 +65,36 @@
 
     sections.forEach((s) => io.observe(s));
   }
+
+  const carousels = Array.from(document.querySelectorAll("[data-carousel]"));
+
+  carousels.forEach((carousel) => {
+    const viewport = carousel.querySelector(".carousel__viewport");
+    const track = carousel.querySelector(".carousel__track");
+    const prevBtn = carousel.querySelector("[data-carousel-prev]");
+    const nextBtn = carousel.querySelector("[data-carousel-next]");
+
+    if (!viewport || !track) return;
+
+    function getStep() {
+      const firstCard = track.querySelector(".card");
+      if (!firstCard) return 280;
+      const cardRect = firstCard.getBoundingClientRect();
+      return Math.round(cardRect.width + 18);
+    }
+
+    function scrollByCards(direction) {
+      viewport.scrollBy({ left: direction * getStep(), behavior: "smooth" });
+    }
+
+    prevBtn?.addEventListener("click", () => scrollByCards(-1));
+    nextBtn?.addEventListener("click", () => scrollByCards(1));
+
+    viewport.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") scrollByCards(-1);
+      if (e.key === "ArrowRight") scrollByCards(1);
+    });
+
+    viewport.setAttribute("tabindex", "0");
+  });
 })();
