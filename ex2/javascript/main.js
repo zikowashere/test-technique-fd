@@ -25,7 +25,7 @@
       .closest(".nav__inner")
       .getBoundingClientRect();
     const left = rect.left - parentRect.left;
-    indicator.style.transform = `translateY(${left}px)`;
+    indicator.style.transform = `translateX(${left}px)`;
     indicator.style.width = `${rect.width}px`;
   }
 })();
