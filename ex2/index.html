@@ -29,9 +29,11 @@
         <picture>
           <source
             media="(min-width: 120px)"
-            srcset="https://images.unsplash.com/photo-1567544568263-55b6f67b5289?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            srcset="
+              https://images.unsplash.com/photo-1567544568263-55b6f67b5289?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+            "
           />
-        
+
           <img
             class="hero__image"
             src="https://source.unsplash.com/featured/640x400?space,galaxy"
@@ -45,27 +47,25 @@
       <div class="hero__inner">
         <h1 class="hero__title">The Galactic Center</h1>
       </div>
-
-      <nav class="nav" aria-label="Navigation principale">
-        <div class="nav__inner">
-          <ul class="nav__list" role="list">
-            <li class="nav__item">
-              <a class="nav__link is-active" href="#carousel-1" data-nav>
-                Carrousel
-              </a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#carousel-2" data-nav> Carrousel 2 </a>
-            </li>
-            <li class="nav__item nav__item--right">
-              <a class="nav__link" href="#footer" data-nav> Footer </a>
-            </li>
-          </ul>
-
-          <span class="nav__indicator" aria-hidden="true"></span>
-        </div>
-      </nav>
     </header>
+
+    <nav class="nav" aria-label="Navigation principale">
+      <div class="nav__inner">
+        <ul class="nav__list" role="list">
+          <li class="nav__item">
+            <a class="nav__link" href="#carousel-1" data-nav> Carrousel </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#carousel-2" data-nav> Carrousel 2 </a>
+          </li>
+          <li class="nav__item nav__item--right">
+            <a class="nav__link" href="#footer" data-nav> Footer </a>
+          </li>
+        </ul>
+
+        <span class="nav__indicator" aria-hidden="true"></span>
+      </div>
+    </nav>
 
     <main id="main" class="main" role="main">
       <section
@@ -78,8 +78,7 @@
             Carrousel - vignette simple
           </h2>
 
-          
-
+          <div class="carousel" data-carousel>
             <div class="carousel__viewport" aria-describedby="carousel-1-hint">
               <ul class="carousel__track" role="list">
                 <li class="card">
@@ -244,7 +243,6 @@
 
             <div class="carousel__controls" aria-label="Contrôles du carrousel">
               <button
-                onclick=""
                 class="btn btn--icon"
                 type="button"
                 data-carousel-prev
@@ -272,33 +270,33 @@
       >
         <div class="section__inner">
           <h2 class="section__title" id="carousel-2-title">
-            Carrousel - vignette simple
+            Carrousel 2 - vignette simple
           </h2>
 
           <div class="carousel" data-carousel>
-            <div class="carousel__viewport">
+            <div class="carousel__viewport" aria-describedby="carousel-2-hint">
               <ul class="carousel__track" role="list">
                 <li class="card">
                   <article class="card__inner">
                     <img
                       class="card__media"
-                      src="https://source.unsplash.com/featured/600x900?planet"
-                      alt="Planète éclairée"
+                      src="https://images.unsplash.com/photo-1712127095617-401a0f691682?q=80&w=1180&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Étoile brillante dans le ciel"
                       loading="lazy"
                       decoding="async"
                     />
                     <div class="card__body">
-                      <h3 class="card__title">EXOPLANET</h3>
+                      <h3 class="card__title">BLUE SUPERGIANT STAR</h3>
                       <p class="card__tag card__tag--green">Star</p>
                       <p class="card__text">
-                        An exoplanet is a planet outside the Solar System,
-                        orbiting another star.
+                        A blue supergiant (BSG) is a hot, luminous star, often
+                        referred to as an OB supergiant.
                       </p>
                     </div>
                     <a
                       class="card__link"
                       href="#"
-                      aria-label="Voir plus sur Exoplanet"
+                      aria-label="Voir plus sur Blue Supergiant Star"
                       >voir plus</a
                     >
                   </article>
@@ -308,23 +306,24 @@
                   <article class="card__inner">
                     <img
                       class="card__media"
-                      src="https://source.unsplash.com/featured/600x900?astronomy"
-                      alt="Observation astronomique"
+                      src="https://images.unsplash.com/photo-1515705576963-95cad62945b6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Lune dans un ciel sombre"
                       loading="lazy"
                       decoding="async"
                     />
                     <div class="card__body">
-                      <h3 class="card__title">ASTRONOMY</h3>
+                      <h3 class="card__title">MILKY WAY</h3>
                       <p class="card__tag card__tag--red">Galaxy</p>
                       <p class="card__text">
-                        Astronomy is the scientific study of celestial objects
-                        and phenomena.
+                        The Milky Way is the galaxy that contains our Solar
+                        System, with the name describing its appearance from
+                        Earth.
                       </p>
                     </div>
                     <a
                       class="card__link"
                       href="#"
-                      aria-label="Voir plus sur Astronomy"
+                      aria-label="Voir plus sur Milky Way"
                       >voir plus</a
                     >
                   </article>
@@ -334,23 +333,24 @@
                   <article class="card__inner">
                     <img
                       class="card__media"
-                      src="https://source.unsplash.com/featured/600x900?blackhole"
-                      alt="Représentation d'un trou noir"
+                      src="https://plus.unsplash.com/premium_photo-1720823182751-4ed2fcfcf626?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8U1VQRVJNQVNTSVZFJTIwQkxBQ0slMjBIT0xFfGVufDB8fDB8fHww"
+                      alt="Bande lumineuse de la Voie lactée"
                       loading="lazy"
                       decoding="async"
                     />
                     <div class="card__body">
-                      <h3 class="card__title">EVENT HORIZON</h3>
+                      <h3 class="card__title">SUPERMASSIVE BLACK HOLE</h3>
                       <p class="card__tag card__tag--orange">Black hole</p>
                       <p class="card__text">
-                        The event horizon is a boundary beyond which events
-                        cannot affect an outside observer.
+                        A supermassive black hole is the largest type of black
+                        hole, with mass on the order of millions to billions of
+                        times the Sun.
                       </p>
                     </div>
                     <a
                       class="card__link"
                       href="#"
-                      aria-label="Voir plus sur Event Horizon"
+                      aria-label="Voir plus sur Supermassive Black Hole"
                       >voir plus</a
                     >
                   </article>
@@ -360,23 +360,23 @@
                   <article class="card__inner">
                     <img
                       class="card__media"
-                      src="https://source.unsplash.com/featured/600x900?comet"
-                      alt="Comète traversant le ciel"
+                      src="https://plus.unsplash.com/premium_photo-1663011445753-d9077d32bda4?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8TkVCVUxBJTIwc3RhcnxlbnwwfHwwfHx8MA%3D%3D"
+                      alt="Nébuleuse colorée"
                       loading="lazy"
                       decoding="async"
                     />
                     <div class="card__body">
-                      <h3 class="card__title">COMET</h3>
+                      <h3 class="card__title">NEBULA</h3>
                       <p class="card__tag card__tag--green">Star</p>
                       <p class="card__text">
-                        Comets are icy bodies that release gas or dust when near
-                        the Sun.
+                        A nebula is an interstellar cloud of dust, hydrogen,
+                        helium and other ionized gases.
                       </p>
                     </div>
                     <a
                       class="card__link"
                       href="#"
-                      aria-label="Voir plus sur Comet"
+                      aria-label="Voir plus sur Nebula"
                       >voir plus</a
                     >
                   </article>
@@ -386,23 +386,49 @@
                   <article class="card__inner">
                     <img
                       class="card__media"
-                      src="https://source.unsplash.com/featured/600x900?cosmos"
-                      alt="Paysage du cosmos"
+                      src="https://plus.unsplash.com/premium_photo-1720632443203-db9aa212ad57?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3BpcmFsJTIwZ2FsYXh5fGVufDB8fDB8fHww"
+                      alt="Galaxie spirale"
                       loading="lazy"
                       decoding="async"
                     />
                     <div class="card__body">
-                      <h3 class="card__title">COSMOS</h3>
+                      <h3 class="card__title">SPIRAL GALAXY</h3>
                       <p class="card__tag card__tag--red">Galaxy</p>
                       <p class="card__text">
-                        Cosmos commonly refers to the universe seen as a
-                        well-ordered whole.
+                        Spiral galaxies have rotating disks with spiral arms and
+                        a central bulge.
                       </p>
                     </div>
                     <a
                       class="card__link"
                       href="#"
-                      aria-label="Voir plus sur Cosmos"
+                      aria-label="Voir plus sur Spiral Galaxy"
+                      >voir plus</a
+                    >
+                  </article>
+                </li>
+
+                <li class="card">
+                  <article class="card__inner">
+                    <img
+                      class="card__media"
+                      src="https://plus.unsplash.com/premium_photo-1669839137069-4166d6ea11f4?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8REVFUCUyMFNQQUNFfGVufDB8fDB8fHww"
+                      alt="Espace profond étoilé"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div class="card__body">
+                      <h3 class="card__title">DEEP SPACE</h3>
+                      <p class="card__tag card__tag--orange">Black hole</p>
+                      <p class="card__text">
+                        Deep space refers to the expanse beyond Earth’s
+                        atmosphere and nearby orbital regions.
+                      </p>
+                    </div>
+                    <a
+                      class="card__link"
+                      href="#"
+                      aria-label="Voir plus sur Deep Space"
                       >voir plus</a
                     >
                   </article>

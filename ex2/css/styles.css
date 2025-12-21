@@ -58,10 +58,6 @@ a {
   height: 420px;
   max-height: 100vh;
 }
-.hero .nav {
-  position: sticky;
-  top: 0;
-}
 
 .hero__bg {
   position: absolute;
@@ -98,11 +94,9 @@ a {
 }
 
 .nav {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 50;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   background: #111827;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -112,7 +106,6 @@ a {
   margin: 0 auto;
   padding: 0 16px;
   position: relative;
-  padding: 0;
 }
 .nav__list {
   margin: 0;
@@ -130,15 +123,19 @@ a {
   height: 48px;
   padding: 0 16px;
   text-decoration: none;
-  color: #e5e7eb;
   font-weight: 700;
   font-size: 16px;
+  color: #e5e7eb;
+  border-radius: 4px;
+  transition: color 200ms ease, background-color 200ms ease;
 }
 .nav__link:hover {
-  color: #ffffff;
+  color: #c4b5fd;
+  background-color: rgba(124, 92, 255, 0.08);
 }
 .nav__link.is-active {
-  color: #ffffff;
+  color: #7c5cff;
+  background-color: rgba(124, 92, 255, 0.18);
 }
 .nav__indicator {
   position: absolute;
@@ -147,7 +144,6 @@ a {
   height: 3px;
   width: 80px;
   background: #7c5cff;
-  transform: translateX(0);
   transition: transform 220ms ease, width 220ms ease;
 }
 @media (max-width: 640px) {
