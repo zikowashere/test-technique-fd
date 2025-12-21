@@ -25,7 +25,22 @@
     <a class="skip-link" href="#main">Aller au contenu principal</a>
 
     <header class="hero" id="top" role="banner" aria-label="En-tête">
-      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__bg" aria-hidden="true">
+        <picture>
+          <source
+            media="(min-width: 120px)"
+            srcset="https://images.unsplash.com/photo-1567544568263-55b6f67b5289?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          />
+        
+          <img
+            class="hero__image"
+            src="https://source.unsplash.com/featured/640x400?space,galaxy"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
+      </div>
 
       <div class="hero__inner">
         <h1 class="hero__title">The Galactic Center</h1>
@@ -63,12 +78,7 @@
             Carrousel - vignette simple
           </h2>
 
-          <div class="carousel" data-carousel>
-            <div class="carousel__header">
-              <p class="carousel__hint" id="carousel-1-hint">
-                Utilisez les boutons ou faites défiler horizontalement.
-              </p>
-            </div>
+          
 
             <div class="carousel__viewport" aria-describedby="carousel-1-hint">
               <ul class="carousel__track" role="list">
@@ -76,7 +86,7 @@
                   <article class="card__inner">
                     <img
                       class="card__media"
-                      src="https://source.unsplash.com/featured/600x900?star"
+                      src="https://images.unsplash.com/photo-1712127095617-401a0f691682?q=80&w=1180&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                       alt="Étoile brillante dans le ciel"
                       loading="lazy"
                       decoding="async"
@@ -102,7 +112,7 @@
                   <article class="card__inner">
                     <img
                       class="card__media"
-                      src="https://source.unsplash.com/featured/600x900?moon"
+                      src="https://images.unsplash.com/photo-1515705576963-95cad62945b6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                       alt="Lune dans un ciel sombre"
                       loading="lazy"
                       decoding="async"
@@ -129,7 +139,7 @@
                   <article class="card__inner">
                     <img
                       class="card__media"
-                      src="https://source.unsplash.com/featured/600x900?milkyway"
+                      src="https://plus.unsplash.com/premium_photo-1720823182751-4ed2fcfcf626?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8U1VQRVJNQVNTSVZFJTIwQkxBQ0slMjBIT0xFfGVufDB8fDB8fHww"
                       alt="Bande lumineuse de la Voie lactée"
                       loading="lazy"
                       decoding="async"
@@ -156,7 +166,7 @@
                   <article class="card__inner">
                     <img
                       class="card__media"
-                      src="https://source.unsplash.com/featured/600x900?nebula"
+                      src="https://plus.unsplash.com/premium_photo-1663011445753-d9077d32bda4?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8TkVCVUxBJTIwc3RhcnxlbnwwfHwwfHx8MA%3D%3D"
                       alt="Nébuleuse colorée"
                       loading="lazy"
                       decoding="async"
@@ -182,7 +192,7 @@
                   <article class="card__inner">
                     <img
                       class="card__media"
-                      src="https://source.unsplash.com/featured/600x900?galaxy"
+                      src="https://plus.unsplash.com/premium_photo-1720632443203-db9aa212ad57?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3BpcmFsJTIwZ2FsYXh5fGVufDB8fDB8fHww"
                       alt="Galaxie spirale"
                       loading="lazy"
                       decoding="async"
@@ -208,7 +218,7 @@
                   <article class="card__inner">
                     <img
                       class="card__media"
-                      src="https://source.unsplash.com/featured/600x900?space"
+                      src="https://plus.unsplash.com/premium_photo-1669839137069-4166d6ea11f4?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8REVFUCUyMFNQQUNFfGVufDB8fDB8fHww"
                       alt="Espace profond étoilé"
                       loading="lazy"
                       decoding="async"
@@ -235,6 +245,176 @@
             <div class="carousel__controls" aria-label="Contrôles du carrousel">
               <button
                 onclick=""
+                class="btn btn--icon"
+                type="button"
+                data-carousel-prev
+                aria-label="Précédent"
+              >
+                ‹
+              </button>
+              <button
+                class="btn btn--icon"
+                type="button"
+                data-carousel-next
+                aria-label="Suivant"
+              >
+                ›
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section"
+        id="carousel-2"
+        aria-labelledby="carousel-2-title"
+      >
+        <div class="section__inner">
+          <h2 class="section__title" id="carousel-2-title">
+            Carrousel - vignette simple
+          </h2>
+
+          <div class="carousel" data-carousel>
+            <div class="carousel__viewport">
+              <ul class="carousel__track" role="list">
+                <li class="card">
+                  <article class="card__inner">
+                    <img
+                      class="card__media"
+                      src="https://source.unsplash.com/featured/600x900?planet"
+                      alt="Planète éclairée"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div class="card__body">
+                      <h3 class="card__title">EXOPLANET</h3>
+                      <p class="card__tag card__tag--green">Star</p>
+                      <p class="card__text">
+                        An exoplanet is a planet outside the Solar System,
+                        orbiting another star.
+                      </p>
+                    </div>
+                    <a
+                      class="card__link"
+                      href="#"
+                      aria-label="Voir plus sur Exoplanet"
+                      >voir plus</a
+                    >
+                  </article>
+                </li>
+
+                <li class="card">
+                  <article class="card__inner">
+                    <img
+                      class="card__media"
+                      src="https://source.unsplash.com/featured/600x900?astronomy"
+                      alt="Observation astronomique"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div class="card__body">
+                      <h3 class="card__title">ASTRONOMY</h3>
+                      <p class="card__tag card__tag--red">Galaxy</p>
+                      <p class="card__text">
+                        Astronomy is the scientific study of celestial objects
+                        and phenomena.
+                      </p>
+                    </div>
+                    <a
+                      class="card__link"
+                      href="#"
+                      aria-label="Voir plus sur Astronomy"
+                      >voir plus</a
+                    >
+                  </article>
+                </li>
+
+                <li class="card">
+                  <article class="card__inner">
+                    <img
+                      class="card__media"
+                      src="https://source.unsplash.com/featured/600x900?blackhole"
+                      alt="Représentation d'un trou noir"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div class="card__body">
+                      <h3 class="card__title">EVENT HORIZON</h3>
+                      <p class="card__tag card__tag--orange">Black hole</p>
+                      <p class="card__text">
+                        The event horizon is a boundary beyond which events
+                        cannot affect an outside observer.
+                      </p>
+                    </div>
+                    <a
+                      class="card__link"
+                      href="#"
+                      aria-label="Voir plus sur Event Horizon"
+                      >voir plus</a
+                    >
+                  </article>
+                </li>
+
+                <li class="card">
+                  <article class="card__inner">
+                    <img
+                      class="card__media"
+                      src="https://source.unsplash.com/featured/600x900?comet"
+                      alt="Comète traversant le ciel"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div class="card__body">
+                      <h3 class="card__title">COMET</h3>
+                      <p class="card__tag card__tag--green">Star</p>
+                      <p class="card__text">
+                        Comets are icy bodies that release gas or dust when near
+                        the Sun.
+                      </p>
+                    </div>
+                    <a
+                      class="card__link"
+                      href="#"
+                      aria-label="Voir plus sur Comet"
+                      >voir plus</a
+                    >
+                  </article>
+                </li>
+
+                <li class="card">
+                  <article class="card__inner">
+                    <img
+                      class="card__media"
+                      src="https://source.unsplash.com/featured/600x900?cosmos"
+                      alt="Paysage du cosmos"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div class="card__body">
+                      <h3 class="card__title">COSMOS</h3>
+                      <p class="card__tag card__tag--red">Galaxy</p>
+                      <p class="card__text">
+                        Cosmos commonly refers to the universe seen as a
+                        well-ordered whole.
+                      </p>
+                    </div>
+                    <a
+                      class="card__link"
+                      href="#"
+                      aria-label="Voir plus sur Cosmos"
+                      >voir plus</a
+                    >
+                  </article>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="carousel__controls"
+              aria-label="Contrôles du carrousel 2"
+            >
+              <button
                 class="btn btn--icon"
                 type="button"
                 data-carousel-prev
@@ -307,5 +487,7 @@
         <p class="footer__copy">The Galactic center © 2021</p>
       </div>
     </footer>
+
+    <script src="./javascript/main.js" defer></script>
   </body>
 </html>
